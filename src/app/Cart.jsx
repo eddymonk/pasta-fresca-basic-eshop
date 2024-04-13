@@ -33,7 +33,7 @@ const Cart = () => {
         if (result && Array.isArray(result.products)) {
           setProducts(result.products);
         } else {
-          console.log("Your Cart list is empty.");
+          console.log("Il tuo carrello e' vuoto");
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -197,11 +197,11 @@ const Cart = () => {
               <div className="row">
                 <div className="col">
                   <h4>
-                    <b>Shopping Cart</b>
+                    <b>Carrello</b>
                   </h4>
                 </div>
                 <div className="col align-self-center text-right text-muted">
-                  {ProductCount} items
+                  {ProductCount} prodotti
                 </div>
                 {ProductCount === 0 && <CartProductNotFound />}
               </div>
@@ -250,19 +250,19 @@ const Cart = () => {
               <Link to="/">
                 <FaLongArrowAltLeft />
               </Link>
-              <span className="text-muted">Back to shop</span>
+              <span className="text-muted">Ritorna al negozio</span>
             </div>
           </div>
           <div className="col-md-4 summary">
             <div>
               <h5>
-                <b>Summary</b>
+                <b>Riepilogo Carrello</b>
               </h5>
             </div>
             <hr />
             <div className="row">
               <div className="col" style={{ paddingLeft: 13 }}>
-                {ProductCount} product Amount:
+                {ProductCount} numero di prodotti:
               </div>
               <div className="col text-right">$ {totalPrice}</div>
             </div>
@@ -272,10 +272,10 @@ const Cart = () => {
                 borderTop: "1px solid rgba(0,0,0,.1)",
                 padding: "2vh 0",
               }}>
-              <div className="col">TOTAL PRICE</div>
+              <div className="col">PREZZO TOTALE</div>
               <div className="col text-right">$ {totalPrice}</div>
             </div>
-            <button className="btn">CHECKOUT</button>
+            <button className="btn">INVIA ORDINE</button>
           </div>
         </div>
       </div>

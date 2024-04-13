@@ -154,7 +154,7 @@ const PrimarySearchAppBar = ({
             </Link>
           </Badge>
         </IconButton>
-        <p className="MobilMenuİconLinks">Filter</p>
+        <p className="MobilMenuİconLinks">Filtro</p>
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -166,7 +166,7 @@ const PrimarySearchAppBar = ({
           </Badge>
         </IconButton>
         <Link to="/Favorites" className="MobilMenuİconLinks">
-          Favorites
+          Favoriti
         </Link>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
@@ -179,7 +179,7 @@ const PrimarySearchAppBar = ({
           <FaShoppingCart />
         </IconButton>
         <Link to="/cart" className="MobilMenuİconLinks">
-          Cart
+          Carrello
         </Link>
       </MenuItem>
     </Menu>
