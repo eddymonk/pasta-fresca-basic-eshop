@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Search";
-import Button from "@mui/material/Button";
-import { IoIosHeart, IoMdHeartEmpty } from "react-icons/io";
+//import Button from "@mui/material/Button";
+//import { IoIosHeart, IoMdHeartEmpty } from "react-icons/io";
 import "../css/ecommerce-category-product.css";
 import "../css/filter.css";
 import Radio from "@mui/material/Radio";
@@ -11,27 +11,27 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import toast, { Toaster } from "react-hot-toast";
-import styled from "styled-components";
+//import styled from "styled-components";
 import FavoriteHeart from "../components/FavoriteAddHeart";
 import { productObj } from "../products/prodotti";
 
-const IconButton = styled(Button)`
-  && {
-    padding: 0;
-    min-width: unset;
-    width: auto;
-    left: 0;
-  }
-`;
+// const IconButton = styled(Button)`
+//   && {
+//     padding: 0;
+//     min-width: unset;
+//     width: auto;
+//     left: 0;
+//   }
+// `;
 
-const HeartIconEmpty = styled(IoMdHeartEmpty)`
-  font-size: 24px;
-`;
+// const HeartIconEmpty = styled(IoMdHeartEmpty)`
+//   font-size: 24px;
+// `;
 
-const HeartIcon = styled(IoIosHeart)`
-  font-size: 24px;
-  color: red;
-`;
+// const HeartIcon = styled(IoIosHeart)`
+//   font-size: 24px;
+//   color: red;
+// `;
 
 function Filter() {
   const [favoritesCount, setFavoritesCount] = useState(0);

@@ -15,7 +15,7 @@ import { IoMenu } from "react-icons/io5";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoMdHome } from "react-icons/io";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Styled from "styled-components";
 import { IoIosHeart } from "react-icons/io";
@@ -95,7 +95,7 @@ const PrimarySearchAppBar = ({
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  const isMenuOpen = Boolean(anchorEl);
+  //const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleProfileMenuOpen = (event) => {

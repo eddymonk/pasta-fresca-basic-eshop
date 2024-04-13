@@ -109,7 +109,7 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
     localStorage.setItem("Products", JSON.stringify(ProductItems));
     setProductItem(!ProductItem);
     setProductsCount(productsCount + 1);
-    toast.success("Product successfully added to cart", {
+    toast.success("Prodotto aggiunto al carrello", {
       style: {
         boxShadow: "none",
       },
@@ -142,7 +142,7 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
     setProductDetails(updatedFavorites);
     setProductsCount(0);
 
-    toast.error("The product has been successfully removed from your cart", {
+    toast.error("Il prodotto e' stato rimosso dal carrello con successo", {
       style: {
         boxShadow: "none",
       },
@@ -164,7 +164,7 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
       favorites.push(productId);
       localStorage.setItem("Favorites", JSON.stringify(favorites));
 
-      toast.success("Product successfully added to favorites", {
+      toast.success("Prodotto e' stato aggiunto tra i tuoi favoriti", {
         style: {
           boxShadow: "none",
         },
@@ -173,7 +173,7 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
       const updatedFavorites = favorites.filter((favId) => favId !== productId);
       localStorage.setItem("Favorites", JSON.stringify(updatedFavorites));
 
-      toast.success("Product removed from favorites", {
+      toast.success("Prodotto rimosso dalla lista dei favoriti", {
         style: {
           boxShadow: "none",
         },
