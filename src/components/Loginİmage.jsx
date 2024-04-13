@@ -7,7 +7,8 @@ const Loginİmage = () => {
     <>
       <div class="container">
         <h1 className="imageText">
-          Benvenuti nel pastificio Casagrande il magnifico
+          Benvenuti nel pastificio Casagrande il magnifico, siamo il top e non
+          ci frega ncazzo
         </h1>
         <img className="Mainİmage" src={PastaFresca} alt="" />
       </div>
