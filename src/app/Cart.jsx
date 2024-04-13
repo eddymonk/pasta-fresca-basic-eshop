@@ -236,7 +236,7 @@ const Cart = () => {
                     </Link>
                   </div>
                   <div className="col">
-                    ${product.price * product.quantity}{" "}
+                    € {product.price * product.quantity}{" "}
                     <span
                       className="close"
                       onClick={() => DeleteProduct(product.id)}>

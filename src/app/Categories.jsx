@@ -260,7 +260,7 @@ function Filter() {
                                 </div>
                                 <Link className="cart">
                                   <span className="price">
-                                    ${product.price}
+                                    € {product.price} x kilo
                                   </span>
                                   <span className="add-to-cart">
                                     <span className="txt">
