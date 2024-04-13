@@ -59,14 +59,14 @@ const IconButton = styled(Button)`
 
 const HeartIconEmpty = styled(IoMdHeartEmpty)`
   font-size: 24px;
-  margin-left: 390px;
+  margin-left: 290px;
   margin-top: 20px;
   position: absolute;
 `;
 
 const HeartIcon = styled(IoIosHeart)`
   font-size: 24px;
-  margin-left: 390px;
+  margin-left: 290px;
   margin-top: 20px;
   color: red;
   position: absolute;
@@ -197,8 +197,8 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            width="450px"
-            height="450px"
+            width="300px"
+            height="400px"
             marginLeft="10px"
             borderRadius="20px">
             <Uppernumber>
@@ -214,8 +214,8 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
               src={product.thumbnail}
               alt=""
               style={{
-                width: "300px",
-                height: "300px",
+                width: "250px",
+                height: "250px",
                 marginBottom: "10px",
                 borderRadius: "10px",
                 marginTop: "10px",
