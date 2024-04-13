@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CartProductNotFound from "../components/CartProductNotFound";
 import { Link } from "react-router-dom";
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import classNames from "classnames";
+//import classNames from "classnames";
 import "../css/Cart.css";
 import "../css/newCart.css";
 import { productObj } from "../products/prodotti";
@@ -162,15 +162,15 @@ const Cart = () => {
 
   let totalPrice = 0;
   productDetails.map((product, index) => {
-    totalPrice += product.price * product.quantity;
+    return (totalPrice += product.price * product.quantity);
   });
 
-  const cartClass = classNames(
-    {
-      "d-flex": ProductCount > 0,
-    },
-    "justify-content-between"
-  );
+  // const cartClass = classNames(
+  //   {
+  //     "d-flex": ProductCount > 0,
+  //   },
+  //   "justify-content-between"
+  // );
 
   return (
     <>

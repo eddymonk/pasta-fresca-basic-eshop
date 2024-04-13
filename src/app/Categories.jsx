@@ -37,10 +37,12 @@ function Filter() {
   const [favoritesCount, setFavoritesCount] = useState(0);
   const [products, setProducts] = useState([]);
   const [productDetails, setProductDetails] = useState([]);
-  const [basket, setBasket] = useState([]);
-  const [total, setTotal] = useState(0);
+  //const [basket, setBasket] = useState([]);
+  //const [total, setTotal] = useState(0);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+
+  console.log({ favoritesCount, productDetails });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -85,15 +87,15 @@ function Filter() {
     fetchProductDetails();
   }, [products]);
 
-  const DeleteFavorite = (productId) => {
-    const favorites = JSON.parse(localStorage.getItem("Favorites")) || [];
-    const updatedFavorites = favorites.filter((favId) => favId !== productId);
-    localStorage.setItem("Favorites", JSON.stringify(updatedFavorites));
-    setProductDetails((prevDetails) =>
-      prevDetails.filter((product) => product.id !== productId)
-    );
-    setFavoritesCount((prevCount) => prevCount - 1);
-  };
+  // const DeleteFavorite = (productId) => {
+  //   const favorites = JSON.parse(localStorage.getItem("Favorites")) || [];
+  //   const updatedFavorites = favorites.filter((favId) => favId !== productId);
+  //   localStorage.setItem("Favorites", JSON.stringify(updatedFavorites));
+  //   setProductDetails((prevDetails) =>
+  //     prevDetails.filter((product) => product.id !== productId)
+  //   );
+  //   setFavoritesCount((prevCount) => prevCount - 1);
+  // };
 
   const [ProductItem, setProductItem] = useState(checkIfProduct());
 

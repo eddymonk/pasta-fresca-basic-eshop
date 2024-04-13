@@ -89,7 +89,7 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
 
   const [productDetails, setProductDetails] = useState([]);
   const [productsCount, setProductsCount] = useState(0);
-
+  console.log(productDetails);
   console.log(productsCount, "productsCount");
 
   const toggleProduct = () => {
