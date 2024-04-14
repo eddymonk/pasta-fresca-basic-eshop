@@ -59,14 +59,14 @@ const IconButton = styled(Button)`
 
 const HeartIconEmpty = styled(IoMdHeartEmpty)`
   font-size: 24px;
-  margin-left: 290px;
-  margin-top: 20px;
+  margin-left: 270px;
+  margin-top: -20px;
   position: absolute;
 `;
 
 const HeartIcon = styled(IoIosHeart)`
-  font-size: 24px;
-  margin-left: 290px;
+  font-size: 270px;
+  margin-left: 250px;
   margin-top: 20px;
   color: red;
   position: absolute;
@@ -216,7 +216,7 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
               alt=""
               style={{
                 width: "250px",
-                height: "250px",
+                height: "200px",
                 marginBottom: "10px",
                 borderRadius: "10px",
                 marginTop: "10px",
