@@ -12,7 +12,6 @@ import Menu from "@mui/material/Menu";
 import { BiCategory } from "react-icons/bi";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
-import { IoSearchSharp } from "react-icons/io5";
 import { IoMdHome } from "react-icons/io";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
@@ -57,16 +56,6 @@ const Search = styled("div")(({ theme }) => ({
     marginLeft: theme.spacing(3),
     width: "auto",
   },
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
