@@ -121,6 +121,7 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
     const DeleteProducts = JSON.parse(localStorage.getItem("Products")) || [];
     let updatedFavorites = [...DeleteProducts];
     let shouldRemoveProduct = false;
+    window.dispatchEvent(new Event("productDeleted"));
 
     updatedFavorites = updatedFavorites.map((product) => {
       if (product.id === productId) {
@@ -140,7 +141,7 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
 
     localStorage.setItem("Products", JSON.stringify(updatedFavorites));
     setProductDetails(updatedFavorites);
-    setProductsCount(0);
+    setProductsCount(productsCount - 1);
 
     toast.error("Il prodotto e' stato rimosso dal carrello con successo", {
       style: {

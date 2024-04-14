@@ -202,19 +202,16 @@ const PrimarySearchAppBar = ({
               </IconButton>
 
               <Typography
-                variant="h6"
+                variant="h5"
                 noWrap
                 component="div"
                 sx={{ display: { xs: "none", sm: "block" } }}>
-                Pasta Fresca Gubbio
+                Casagrande Pasta Fresca
               </Typography>
 
               <Search>
-                <SearchIconWrapper>
-                  <IoSearchSharp />
-                </SearchIconWrapper>
                 <StyledInputBase
-                  placeholder="Search…"
+                  placeholder=" Cerca prodotti..."
                   inputProps={{ "aria-label": "search" }}
                   value={value}
                   onChange={(e) => {

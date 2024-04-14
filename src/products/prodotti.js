@@ -134,3 +134,10 @@ export const productObj = {
   skip: 0,
   limit: 30,
 };
+
+//ravioli
+//tortellini
+//pasta ripiena
+//pasta lunga
+//pasta corta
+//specialita

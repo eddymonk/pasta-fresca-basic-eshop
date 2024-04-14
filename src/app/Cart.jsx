@@ -17,12 +17,13 @@ const Cart = () => {
   //   );
   // }, [basket]);
 
-  const [ProductCount, setProductCount] = useState(0);
+  const [productCount, setProductCount] = useState(0);
   const [products, setProducts] = useState([]);
   const [productDetails, setProductDetails] = useState([]);
+
   useEffect(() => {
-    const ProductCount = JSON.parse(localStorage.getItem("Products")) || [];
-    setProductCount(ProductCount.length);
+    const productCount = JSON.parse(localStorage.getItem("Products")) || [];
+    setProductCount(productCount.length);
   }, []);
 
   useEffect(() => {
@@ -73,6 +74,22 @@ const Cart = () => {
     fetchProductDetails();
   }, [products]);
 
+  useEffect(() => {
+    const handleProductDeleted = () => {
+      const updatedProducts =
+        JSON.parse(localStorage.getItem("Products")) || [];
+
+      setProductDetails(updatedProducts);
+      setProductCount(updatedProducts.length);
+    };
+
+    window.addEventListener("productDeleted", handleProductDeleted);
+
+    return () => {
+      window.removeEventListener("productDeleted", handleProductDeleted);
+    };
+  }, [productDetails, productCount, setProductDetails, setProductCount]);
+
   const DeleteProduct = (productId) => {
     const DeleteProducts = JSON.parse(localStorage.getItem("Products")) || [];
     const updatedFavorites = DeleteProducts.filter(
@@ -82,6 +99,7 @@ const Cart = () => {
     setProductDetails((prevDetails) =>
       prevDetails.filter((product) => product.id !== productId)
     );
+
     setProductCount((prevCount) => prevCount - 1);
   };
 
@@ -201,9 +219,9 @@ const Cart = () => {
                   </h4>
                 </div>
                 <div className="col align-self-center text-right text-muted">
-                  {ProductCount} prodotti
+                  {productCount} prodotti
                 </div>
-                {ProductCount === 0 && <CartProductNotFound />}
+                {productCount === 0 && <CartProductNotFound />}
               </div>
             </div>
             {productDetails.map((product, index) => (
@@ -262,7 +280,7 @@ const Cart = () => {
             <hr />
             <div className="row">
               <div className="col" style={{ paddingLeft: 13 }}>
-                {ProductCount} numero di prodotti:
+                {productCount} numero di prodotti:
               </div>
               <div className="col text-right">$ {totalPrice}</div>
             </div>
