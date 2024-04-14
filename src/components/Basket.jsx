@@ -31,7 +31,7 @@ const Basket = ({ basket, products, total, resetBasket }) => {
             />
           ))}
           <Box mt={2}>
-            <Typography variant="h6">Total: € {total} x kilo</Typography>
+            <Typography variant="h6">Total: € {total} x 500 grammi</Typography>
           </Box>
 
           <Box mt={2}>

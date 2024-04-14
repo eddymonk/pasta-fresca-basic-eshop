@@ -127,7 +127,9 @@ const Favorites = ({ product, total, money, basket, setBasket, value }) => {
                   <Link
                     className="cart"
                     onClick={() => toggleProduct(product.id)}>
-                    <span className="price">€ {product.price} x kilo</span>
+                    <span className="price">
+                      € {product.price} x 500 grammi
+                    </span>
                     <span className="add-to-cart">
                       <span className="txt">
                         <Link to="/cart" className="GoToCartLink">

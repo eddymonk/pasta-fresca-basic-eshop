@@ -282,7 +282,7 @@ const Cart = () => {
               <div className="col" style={{ paddingLeft: 13 }}>
                 {productCount} numero di prodotti:
               </div>
-              <div className="col text-right">$ {totalPrice}</div>
+              <div className="col text-right">€ {totalPrice}</div>
             </div>
             <div
               className="row"
@@ -291,9 +291,21 @@ const Cart = () => {
                 padding: "2vh 0",
               }}>
               <div className="col">PREZZO TOTALE</div>
-              <div className="col text-right">$ {totalPrice}</div>
+              <div className="col text-right">€ {totalPrice}</div>
             </div>
-            <button className="btn">INVIA ORDINE</button>
+            <div className="mt-5">
+              Prima di inviare l'ordine compila il campo qui sotto cosi sapremo
+              chi sei:
+            </div>
+
+            <input
+              type="text"
+              placeholder="Nome e Cognome / Azienda"
+              className="form-control mb-2 mt-2"
+            />
+            <button className="btn" style={{ backgroundColor: "white" }}>
+              INVIA ORDINE
+            </button>
           </div>
         </div>
       </div>

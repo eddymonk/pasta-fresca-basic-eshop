@@ -1,21 +1,18 @@
-
-
 .spec {
   font-size: 11px;
 }
-#AddQuantity-RemoveQuantity{
+#AddQuantity-RemoveQuantity {
   margin-right: 20px;
 }
-#AddQuantity-RemoveQuantity:hover{
+#AddQuantity-RemoveQuantity:hover {
   cursor: pointer;
 }
-#Leftİcon{
+#Leftİcon {
   left: 0;
 }
-#Rightİcon{
+#Rightİcon {
   right: 0;
 }
-  
 
 .quantity-controller {
   display: flex;
@@ -34,19 +31,17 @@
   display: none;
 }
 @media (max-width: 850px) {
-
   .items img {
-      width: 50px;
-      height: 50px;
-      border-radius: 5px;
-      margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
   }
 
   /* Removes product description */
   .spec {
-      display: none;
+    display: none;
   }
-
 }
 
 @media (max-width: 500px) {

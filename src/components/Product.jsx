@@ -224,7 +224,7 @@ const Product = ({ product, total, money, basket, setBasket, value }) => {
             />
             <Typography variant="h6">{product.title}</Typography>
             <Typography className="price" variant="body1">
-              € {product.price} x kilo
+              € {product.price} x 500 grammi
             </Typography>
             <Box display="flex" alignItems="center" marginTop="10px">
               <Button
