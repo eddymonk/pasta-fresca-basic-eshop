@@ -7,8 +7,8 @@ const Loginİmage = () => {
     <>
       <div class="container">
         <h1 className="imageText">
-          Benvenuti nel pastificio Casagrande il magnifico, siamo il top e non
-          ci frega ncazzo
+          Offerta speciale: Tortellini con carne mista 4 Euro al kilo fino al 20
+          Giugno
         </h1>
         <img className="Mainİmage" src={PastaFresca} alt="" />
       </div>
