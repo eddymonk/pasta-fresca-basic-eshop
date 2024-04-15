@@ -2,12 +2,59 @@ import React, { useState, useEffect } from "react";
 import CartProductNotFound from "../components/CartProductNotFound";
 import { Link } from "react-router-dom";
 import { FaLongArrowAltLeft } from "react-icons/fa";
+import emailjs from "emailjs-com";
 //import classNames from "classnames";
 import "../css/Cart.css";
 import "../css/newCart.css";
 import { productObj } from "../products/prodotti";
 
 const Cart = () => {
+  const [name, setName] = useState("");
+
+  const handleOrderSubmit = async () => {
+    try {
+      const productDetailsClean = [];
+      // eslint-disable-next-line no-unused-vars
+      let formattedString = "";
+
+      // Iterate through productDetails array to extract title and quantity
+      productDetails.forEach((product) => {
+        productDetailsClean.push({
+          title: product.title,
+          quantity: product.quantity, // Assuming there's a quantity property in each product object
+        });
+      });
+
+      // Function to format productDetailsClean array into a string
+      const formatProductDetailsClean = (productDetailsClean) => {
+        let formattedString = "";
+        productDetailsClean.forEach((item, index) => {
+          formattedString += `${item.title}: ${item.quantity}`;
+          if (index < productDetailsClean.length - 1) {
+            formattedString += ",\n";
+          }
+        });
+        return formattedString;
+      };
+
+      const templateParams = {
+        name,
+        formattedProductDetails: formatProductDetailsClean(productDetailsClean), // Add formatted product details to templateParams
+      };
+
+      await emailjs.send(
+        "service_scuwnyv",
+        "template_susina",
+        templateParams,
+        "pOnIOKoxJfK63521L"
+      );
+
+      console.log("Email sent successfully");
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
   // const[total, SetTotal] = useState('')
   // useEffect(() => {
   //   setTotal(
@@ -302,8 +349,13 @@ const Cart = () => {
               type="text"
               placeholder="Nome e Cognome / Azienda"
               className="form-control mb-2 mt-2"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
             />
-            <button className="btn" style={{ backgroundColor: "white" }}>
+            <button
+              className="btn"
+              style={{ backgroundColor: "white" }}
+              onClick={handleOrderSubmit}>
               INVIA ORDINE
             </button>
           </div>
